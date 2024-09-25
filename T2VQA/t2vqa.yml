@@ -1,0 +1,47 @@
+name: T2VQA
+num_epochs: 30
+warmup_epochs: 2.5
+save_model: true
+batch_size: 4
+num_workers: 6
+split_seed: 1
+
+wandb:
+    project_name: T2VQA
+
+data:   
+    t2v:
+        type: T2VDataset
+        args:
+            phase: test
+            anno_file: /home/tengchuan/T2VQA/configs/database_standard_16.6_50.txt
+            data_prefix: /home/tengchuan/database/T2Vdata
+            size: 224
+            clip_len: 8
+            frame_interval: 2
+
+
+
+model:
+    args:
+        med_config: '/home/tengchuan/T2VQA/configs/med_config.json'
+        image_size: 224
+        nhead: 8
+        dropout: 0.1
+        nlayers: 6
+        embed_dim: 256 
+        llm_model: /home/tengchuan/T2VQA/vicuna-7b-v1.1
+        blip_weights: /home/tengchuan/T2VQA/pretrained_weights/model_large.pth
+        swin_weights: /home/tengchuan/T2VQA/pretrained_weights/swin_tiny_patch244_window877_kinetics400_1k.pth
+        bert_weights: /home/tengchuan/T2VQA/bert-base-uncased
+        
+            
+optimizer:
+    lr: !!float 1e-5
+    wd: 0.05
+        
+
+test_load_path: /home/tengchuan/T2VQA/pretrained_weights/T2VQA_final_head_t2v_0_eval_s_finetuned.pth
+
+    
+        
