@@ -18,4 +18,6 @@ The T2VQA model is finetuned based on the following pre-trained weights:
 
 BLIP w/ ViT-L: [model_large.pth](https://storage.googleapis.com/sfr-vision-language-research/BLIP/models/model_large.pth)
 
+Video Swin Transformer-T [swin_tiny_patch244_window877_kinetics400_1k.pth](https://github.com/SwinTransformer/storage/releases/download/v1.0.4/swin_tiny_patch244_window877_kinetics400_1k.pth)
 
+Vicuna-7b-v1.1: https://huggingface.co/lmsys/vicuna-7b-v1.1
