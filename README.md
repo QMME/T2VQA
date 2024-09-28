@@ -20,4 +20,26 @@ BLIP w/ ViT-L: [model_large.pth](https://storage.googleapis.com/sfr-vision-langu
 
 Video Swin Transformer-T [swin_tiny_patch244_window877_kinetics400_1k.pth](https://github.com/SwinTransformer/storage/releases/download/v1.0.4/swin_tiny_patch244_window877_kinetics400_1k.pth)
 
+Bert base: https://huggingface.co/google-bert/bert-base-uncased
+
 Vicuna-7b-v1.1: https://huggingface.co/lmsys/vicuna-7b-v1.1
+
+Replace paths in `t2vqa.yml` using your local paths.
+
+## Training
+
+    python train.py -o ./t2vqa.yml
+
+## Testing
+
+    python test.py -o ./t2vqa.yml
+
+## Citation
+```bibtex
+    @article{kou2024subjective,
+  title={Subjective-Aligned Dateset and Metric for Text-to-Video Quality Assessment},
+  author={Kou, Tengchuan and Liu, Xiaohong and Zhang, Zicheng and Li, Chunyi and Wu, Haoning and Min, Xiongkuo and Zhai, Guangtao and Liu, Ning},
+  journal={arXiv preprint arXiv:2403.11956},
+  year={2024}
+}
+```
